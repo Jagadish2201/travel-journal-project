@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Spring XML configuration file -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+           
+           <!-- Create TravelJournalDaoImpl bean -->
+           <bean id="tj_impli" 
+           class="com.hibernate_folder.travel_journal_project.pra.TravelJournalDaoImpl">
+           
+           </bean>
+           
+           <!-- Create TravelJournal bean -->
+           <bean id="Journal" 
+           class="com.hibernate_folder.travel_journal_project.pra.TravelJournal">
+           </bean>
+           
+                       
+</beans>

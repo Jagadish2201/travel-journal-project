@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Hibernate configuration file -->
+
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+    
+<hibernate-configuration>
+
+    <!-- Hibernate SessionFactory configuration -->
+    <session-factory>
+
+        <!-- MySQL JDBC Driver -->
+        <property name="hibernate.connection.driver_class">
+    com.mysql.cj.jdbc.Driver
+</property>
+
+<property name="hibernate.connection.url">
+    jdbc:mysql://localhost:3306/db_journal
+</property>
+
+<property name="hibernate.connection.username">
+    YOUR_MYSQL_USER_NAME
+</property>
+
+<property name="hibernate.connection.password">
+    YOUR_MYSQL_PASSWORD
+</property>
+
+<property name="hibernate.dialect">
+    org.hibernate.dialect.MySQLDialect
+</property>
+
+<property name="hibernate.show_sql">
+    true
+</property>
+
+<property name="hibernate.hbm2ddl.auto">
+    update
+</property>
+
+        <!-- Map TravelJournal entity with Hibernate -->
+        <mapping class="com.hibernate_folder.travel_journal_project.pra.TravelJournal"/>
+
+    </session-factory>
+
+</hibernate-configuration>
